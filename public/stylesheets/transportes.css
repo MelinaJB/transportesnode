@@ -1,0 +1,310 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+header{
+    background-color: #2e64a1;
+    padding: 16px 0;;
+}
+
+header h1{
+    color: white;
+    font-size: 2.5em;
+    font-weight: 100; /*font-weight es para cambiar el grosor de la letra*/
+    font-style: italic;
+    display: inline-block; /*hago que quede en la misma linea*/
+    position: relative; /*al poner la posicion relativa, cuando pongo bottom sube a partir de donde estaba ubicado*/
+    bottom: 35px;
+    /*text-shadow: 0 0 5px black;*/
+}
+
+nav{
+    background-color: #6da9ed;
+    margin-bottom: 25px;
+}
+
+nav ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+
+nav ul li{
+    width: 16%;
+    display: inline-block;
+    /*background-color: red;*/
+
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 5px 0;
+
+}
+
+
+nav ul li a:hover{
+    background-color: #4c76a5;
+}
+
+nav ul li a.activo{ /*siempre poner el .activo pegado a la a - fuerza al programa a buscar la a que tiene la clase activo*/
+    background-color: #4c76a5;
+}
+
+footer{
+    background-color: #ccc;
+    padding: 25px 0;
+    text-align: center;
+    clear: both; /**/
+}
+
+.holder{
+    max-width: 960px; /*la resolución es de 1200*/
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+
+
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+/*Inicio home*/
+
+.bienvenidos{
+    width: 75%;
+    /*background-color: yellow; /*le pongo color para visualizarlo en el armado*/
+    float: left;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.testimonios{
+    width: 25%;
+    /*background-color: tomato;*/
+    float: right;
+}
+
+.bienvenidos p{
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.testimonio{
+    background-color: rgb(226, 223, 223);
+    padding: 12px;
+
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-size: 20px;
+    font-style: italic;
+    display: block; /*pasa a ser un bloque y queda separado de juan gomez-zapatos.com*/
+}
+
+.testimonio .autor{
+    font-size: 11px;
+    /*background-color: orange; /*para ver que me toma*/
+    display: block; /*porque vi que me tomaba como un inline-block, entonces lo declaro como block para poder centrarlo*/
+    text-align: center;
+}
+
+/*Fin Home*/
+
+/*Inicio Nosotros*/ 
+.historia p{
+    font-size: 13px;
+}
+
+.personas{
+    display: flex;
+    /*background-color: tomato;*/
+    justify-content: space-between; /*que vaya de punta a punta*/
+    margin-bottom: 20px; /*Para separar el staff del footer*/
+}
+
+.persona{
+    width: 18%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.persona img{
+    max-width: 75%;
+    border-radius: 50%; /*para que me quede circular vites*/
+    box-shadow: 0 0 5px gray;
+}
+
+.persona h5,
+.persona h6{ /*las pongo separadas por una coma porque van a trabajar igual*/
+    margin:0; /*todos los h tienen un margen predeterminado y con esto lo logro sacar*/
+    color: #2e64a1;
+    font-weight: normal;
+}
+
+.persona h6{
+    font-style: italic;
+    font-weight: 800px;
+}
+
+.persona p{
+    font-size: 12px;
+}
+/*Fin Nosotros - Inicio Servicios*/
+.servicio{
+    border:1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden; /*es necesario, generalmente, con flotados*/
+}
+
+.servicio img{
+    border-radius: 8px;
+}
+
+.servicio .info{
+    max-width: 75%;
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 500;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 10px; /*con margin no sirve*/
+    margin: 10px 0; /*para que no quede tan separado el texto del título*/
+}
+.servicio .info p{
+    font-size: 13px;
+    /*line-height: 20px;*/
+}
+
+
+
+
+
+
+/*Lo nuevo*/
+.servicio:nth-child(odd) img{ /*odd es impar - tener en cuenta que se empieza a numerar desde cero. 1er imagen es cero, la segunda es 1,la tercera 2 y la cuarta 3*/
+    float:left;
+    margin:0 16px 0 0;
+}
+
+.servicio:nth-child(odd) .info{
+    float:right;  
+
+}
+
+/*.servicio:nth-child(odd) .info{
+    text-align: right;
+}*/
+
+
+.servicio:nth-child(even) img{ /*even es par*/
+    float:right;
+    margin: 0 0 0 16px;
+}
+
+.servicio:nth-child(even) .info { /*even es par*/
+    float:left;
+}
+
+
+
+/*Fin de servicios*/
+
+/*Inicio Galeria*/
+
+.galeria .foto{
+    border: 1px solid #ccc;
+    float: left;
+    padding: 5px;
+    width: 18%;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+}
+
+.galeria .foto img{
+    width: 100%;/*cuando falta un poquito lo podemos agrandar asi*/
+    display: block; /*para que se rellene de forma proporcional*/
+}
+
+.galeria .foto:nth-child(5n+1){
+    margin-left: 0;
+    /*border-color: red;*/
+}
+
+.galeria .foto:nth-child(3){
+    background-color: violet;
+}
+
+/*Fin galeria*/
+/*Inicio contacto*/
+
+.contacto,
+.redes{
+    width: 50%;
+    /*background-color: yellow;*/
+    box-sizing: border-box; /*para que no se caiga redes cuando le pongo el border right*/
+}
+
+.contacto{
+    float: left;
+    border-right: 2px solid #2e64a1;
+}
+
+.redes{
+    float: right;
+    padding-left: 10px;
+}
+
+.formulario input, 
+.formulario textarea{
+    background-color: #ccc;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding:5px;
+    /*width: 70%; opción 1*/
+    width: 93%; /*opción 2*/
+}
+
+.formulario label{
+   /* background-color: yellow;*/
+    width: 20%; /*les pongo a todos el mismo ancho, sino se pone el input automaticamente despues del label y quedan desparejos*/
+    display: inline-block; /*con inline-block hago que queden las label al lado de los input y con solo block quedan las label arriba de los input, al hacerse block (caja) toma todo el espacio del rengloón y corre abajo lo que tenga a sus costados*/
+    vertical-align: top;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 200px;
+}
+
+.formulario input[type="submit"]{ /*para declarar un tipo particular de imput lo escribo asi, en este caso particular solo submit*/
+    width: auto; /*el ancho por defecto*/
+    background-color: #6da9ed;
+    color: white;
+    box-shadow: 0 0 5px gray;
+
+}
+
+.centrar{
+    /*background-color: hotpink;*/
+    text-align: center;
+}
+
+
+
+/*Fin contacto*/
