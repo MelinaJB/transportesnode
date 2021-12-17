@@ -34,7 +34,7 @@ app.use(session({
   secret: 'melinajoloidovskybor',
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 60000} //se le pone uno grande para trabajar dsp se puede modificar
+  cookie: { maxAge: 600000} //se le pone uno grande para trabajar dsp se puede modificar
 }))
 
 secured = async function(req, res, next){
