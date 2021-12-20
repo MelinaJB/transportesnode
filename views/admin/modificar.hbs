@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <h2>Modificar novedades</h2>
-            <form action="/admin/novedades/modificar" method="post">
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
                 <p>Novedad nro #{{novedad.id}}</p>
                 <input type="hidden" name="id" value={{novedad.id}}> {{!--necesito el name porque es el que pasa de una pag a la otra - campo oculto--}}
                 <div class="mb-3">
@@ -11,6 +11,14 @@
 
                 <div class="mb-3">
                     <textarea type="text" class="form-control" id="titulo" placeholder="Subtítulo" name="subtitulo">{{novedad.subtitulo}}</textarea>
+                </div>
+
+                 <div class="mb-3">
+                    <p>IMAGEN: <input type="file" name="imagen"></p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" value="1"> Eliminar la imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+                    </p>
                 </div>
 
                 <div class="mb-3">
