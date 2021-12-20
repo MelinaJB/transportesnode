@@ -1,22 +1,12 @@
  <main class="holder">
         <h2>Novedades</h2>
+        {{#each novedades}}
         <div class="novedades">
-            <h3>TITULO</h3>
-            <h4>Subtitulo</h4>
-            <p>Cuerpo de la novedark Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque velit eos aspernatur soluta praesentium nemo aut dolores quibusdam repellendus nobis nihil magnam sed fugit, incidunt deserunt totam excepturi repellat eaque.</p>
+            <h3>{{titulo}}</h3>
+            <h4>{{subtitulo}}</h4>
+            <p>{{cuerpo}}</p>
             <hr>
         </div>
-        <div class="novedades">
-            <h3>TITULO</h3>
-            <h4>Subtitulo</h4>
-            <p>Cuerpo de la novedark Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque velit eos aspernatur soluta praesentium nemo aut dolores quibusdam repellendus nobis nihil magnam sed fugit, incidunt deserunt totam excepturi repellat eaque.</p>
-            <hr>
-        </div>
-        <div class="novedades">
-            <h3>TITULO</h3>
-            <h4>Subtitulo</h4>
-            <p>Cuerpo de la novedark Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque velit eos aspernatur soluta praesentium nemo aut dolores quibusdam repellendus nobis nihil magnam sed fugit, incidunt deserunt totam excepturi repellat eaque.</p>
-            <hr>
-        </div>
+        {{/each}}
        
     </main>
