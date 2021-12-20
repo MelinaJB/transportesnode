@@ -2,19 +2,23 @@
     <div class="row">
         <div class="col">
             <h2>Agregar novedades</h2>
-            <form action="/admin/novedades/agregar" method="post">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <input type="text" class="form-control" id="titulo" placeholder="Título" name="titulo"/>
                 </div>
 
                 <div class="mb-3">
-                    <textarea type="text" class="form-control" id="titulo" placeholder="Subtítulo"
+                    <textarea type="text" class="form-control" id="subtitulo" placeholder="Subtítulo"
                         name="subtitulo"></textarea>
                 </div>
 
                 <div class="mb-3">
-                    <textarea type="text" class="form-control" id="titulo" placeholder="Contenido"
+                    <label>IMAGEN: <input type="file" name="imagen"></label>
+                </div>
+
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" id="cuerpo" placeholder="Contenido"
                         name="cuerpo"></textarea>
                 </div>
 
