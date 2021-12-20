@@ -9,6 +9,13 @@ router.get('/', function(req, res, next) {
     })
 });
 
+router.get('/logout', function(req, res, next){
+    req.session.destroy();
+    res.render('admin/login',{
+        layout:'admin/layout'
+    })
+})
+
 router.post('/', async function(req, res, next){
     try{
         
@@ -32,9 +39,6 @@ router.post('/', async function(req, res, next){
         console.log(error);
     }
 });
-
-
-
 
 
 module.exports = router;
