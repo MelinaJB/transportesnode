@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Modificar novedades</h2>
+            <form action="/admin/novedades/modificar" method="post">
+                <p>Novedad nro #{{novedad.id}}</p>
+                <input type="hidden" name="id" value={{novedad.id}}> {{!--necesito el name porque es el que pasa de una pag a la otra - campo oculto--}}
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="titulo" placeholder="Título" name="titulo" value="{{novedad.titulo}}"/>
+                </div>
+
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" id="titulo" placeholder="Subtítulo" name="subtitulo">{{novedad.subtitulo}}</textarea>
+                </div>
+
+                <div class="mb-3">
+                    <textarea type="text" class="form-control" id="titulo" placeholder="Contenido" name="cuerpo">{{novedad.cuerpo}}</textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Modificar</button>
+            </form>
+            {{#if error}}
+            <p>{{message}}</p>
+            {{/if}}
+        </div>
+    </div>
+</div>
